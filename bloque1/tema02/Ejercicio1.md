@@ -66,7 +66,7 @@ No se te entrega ningún archivo de partida: **crea tú un Excel desde cero** co
 
 ## Parte 1 — Diseña las tablas (entidades)
 
-A partir de los 4 bloques anteriores, identifica y construye las tablas:
+A partir de los 4 bloques anteriores, identifica y construye 5 tablas: **CIUDADES, CLUBES, PRESIDENTES, JUGADORES Y ENTTRENADORES**
 
 
 **Tarea:** tú decides qué número le das a cada `id_ciudad`, `id_club`, etc. — no vienen dados en ningún sitio. Lo importante es que, una vez decidido, **lo uses de forma coherente** en todas las tablas donde haga falta esa clave foránea.
