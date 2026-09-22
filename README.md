@@ -49,6 +49,15 @@ Bloque 5  ──►  DML + DCL + TCL  → modificamos, controlamos y protegemos
 
 ---
 
+## Estructura de cada tema
+
+- **Apuntes.md**: Resumen teórico de cada tema. 
+- **casospracticos.md** — Casos prácticos con su resolución
+- **ejercicios.md** — Ejercicios para practicar y desarrollados en clase
+
+
+---
+
 
 ## Herramientas
 
