@@ -98,15 +98,5 @@ Elige la tabla **CLUBES** y divídela en dos fragmentos, separando filas por un 
 
 **Justifica en una frase** por qué tendría sentido esta separación en un caso real (piensa en qué normativa, moneda o idioma podría ser distinto entre un bloque y otro).
 
----
 
-## Entregable
-
-Un único archivo Excel, **creado por ti desde cero**, con las siguientes pestañas:
-
-```
-1. Tablas                     (las 5 tablas normalizadas, con IDs inventados por ti)
-2. Fragmentacion_Vertical      (JUGADORES_PRINCIPAL + JUGADORES_SECUNDARIA)
-3. Fragmentacion_Horizontal    (CLUBES_ESPAÑA + CLUBES_EXTRANJERO)
-```
 
