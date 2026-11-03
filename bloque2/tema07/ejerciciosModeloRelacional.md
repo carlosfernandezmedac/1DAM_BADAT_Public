@@ -31,6 +31,11 @@ Transformación de un esquema E-R a un esquema relacional
 
 ## Ejercicio 4 - Cursos
 
-![Enunciado ejercicio 3](img/ejercicio4.png)
+![Enunciado ejercicio 4](img/ejercicio4.png)
 
+---
+
+## Ejercicio 5 - Cine
+
+![Enunciado ejercicio 5](img/ejercicio5.png)
 
