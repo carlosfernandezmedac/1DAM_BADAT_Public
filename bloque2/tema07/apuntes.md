@@ -297,15 +297,6 @@ CONSULTORES (DNI, Ventas)                      PK, FK: DNI → EMPLEADOS(DNI)
 
 > 💡 Si la subclase tiene **su propio identificador** (por ejemplo, el consultor tiene `id_consultor` además del DNI), la tabla de la subclase usa su id como PK y añade el DNI como **FK `UNIQUE`** hacia la superclase.
 
-### 6.2. Restricciones de inclusión y exclusión (Tema 5)
-
-Dos relaciones entre las mismas entidades pueden tener restricciones entre sí. Al pasar a tablas:
-
-- **Inclusión** (toda pareja de IMPARTE debe estar también en RECIBE): **FK compuesta** de IMPARTE hacia RECIBE.
-- **Exclusión** (una pareja no puede estar en las dos): SQL no tiene una restricción para esto. Se resuelve con un **trigger** (Bloque 3) o uniendo las dos relaciones en una sola tabla con una columna `rol`, de modo que la PK `(profesor, curso)` impide que la misma pareja esté en las dos.
-- **Exclusividad / inclusividad** (afectan a la entidad, no a la pareja): se comprueban con un **trigger** o desde la aplicación.
-
-![Inclusión y exclusión a tablas](img/13_inclusion_exclusion.png)
 
 ---
 
