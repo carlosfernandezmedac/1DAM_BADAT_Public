@@ -17,4 +17,21 @@ Un centro guarda las notas de sus alumnos en una única tabla, `ALUMNOS_NOTAS`:
 
 Normaliza la tabla hasta cumplir la Tercera Forma Normal (3FN). Muestra todas las tablas resultantes y sus claves primarias.
 
+---
+
+## Ejercicio 2 — Socios y actividades de un gimnasio
+
+Un gimnasio guarda las inscripciones de sus socios en una única tabla, `SOCIOS_ACTIVIDADES`:
+
+| id_socio | nombre | cod_actividad | actividad | cod_ciudad | ciudad | fecha_alta |
+|---|---|---|---|---|---|---|
+| S001 | Lucía | A01 | Yoga | 23 | Jaén | 10/01/2026 |
+| S001 | Lucía | A02 | Pilates | 23 | Jaén | 15/02/2026 |
+| S002 | Pablo | A02 | Pilates | 41 | Sevilla | 03/03/2026 |
+| S002 | Pablo | A03 | Spinning | 41 | Sevilla | 03/03/2026 |
+| S003 | Lucía | A01 | Yoga | 41 | Sevilla | 21/04/2026 |
+
+*Cada socio vive en una única ciudad (la que indica su código) y puede estar inscrito en varias actividades. `fecha_alta` es la fecha en que el socio se apuntó a esa actividad.*
+
+**Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias, indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
 
