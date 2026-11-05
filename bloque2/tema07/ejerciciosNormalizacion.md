@@ -39,6 +39,8 @@ Un gimnasio guarda las inscripciones de sus socios en una única tabla, `SOCIOS_
 
 ## Ejercicio 3 — Ventas de una tienda de informática
 
+![alt text](img/normalizacion3.png)
+
 Una tienda de informática guarda sus ventas en una única tabla, `VENTAS_TIENDA`:
 
 | DNI | IdP | NombreP | Stock | Nombre | Provincia | FechaVenta | Unds | Habitantes |
