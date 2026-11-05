@@ -35,3 +35,20 @@ Un gimnasio guarda las inscripciones de sus socios en una única tabla, `SOCIOS_
 
 **Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias, indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
 
+---
+
+## Ejercicio 3 — Ventas de una tienda de informática
+
+Una tienda de informática guarda sus ventas en una única tabla, `VENTAS_TIENDA`:
+
+| DNI | IdP | NombreP | Stock | Nombre | Provincia | FechaVenta | Unds | Habitantes |
+|---|---|---|---|---|---|---|---|---|
+| 44444444X | P01, P02 | Ratón, Auricular | 50, 100 | Ana | Jaén | 2024-01-10 | 1, 2 | 100000 |
+| 55555555H | P03 | Teclado | 20 | Luis | Granada | 2024-01-11 | 3 | 200000 |
+| 66666666N | P04 | Monitor | 10 | Marta | Málaga | 2024-01-12 | 1 | 500000 |
+
+*Cada cliente se identifica por su DNI y vive en una única provincia. Cada producto se identifica por su `IdP` y tiene un `Stock` propio. `FechaVenta` y `Unds` son la fecha y las unidades de esa venta de ese producto a ese cliente. `Habitantes` es la población de la provincia.*
+
+**Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias (y claves foráneas), indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
+
+
