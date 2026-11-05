@@ -31,7 +31,7 @@ Un gimnasio guarda las inscripciones de sus socios en una única tabla, `SOCIOS_
 | S002 | Pablo | A03 | Spinning | 41 | Sevilla | 03/03/2026 |
 | S003 | Lucía | A01 | Yoga | 41 | Sevilla | 21/04/2026 |
 
-*Cada socio vive en una única ciudad (la que indica su código) y puede estar inscrito en varias actividades. `fecha_alta` es la fecha en que el socio se apuntó a esa actividad.*
+*Cada socio vive en una única ciudad (la que indica su código) y puede estar inscrito en varias actividades. `fecha_alta` es la fecha en que el socio se apuntó a esa actividad. La clave primaria de la tabla es `(id_socio, cod_actividad)`.*
 
 **Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias, indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
 
@@ -47,7 +47,8 @@ Una tienda de informática guarda sus ventas en una única tabla, `VENTAS_TIENDA
 | 55555555H | P03 | Teclado | 20 | Luis | Granada | 2024-01-11 | 3 | 200000 |
 | 66666666N | P04 | Monitor | 10 | Marta | Málaga | 2024-01-12 | 1 | 500000 |
 
-*Cada cliente se identifica por su DNI y vive en una única provincia. Cada producto se identifica por su `IdP` y tiene un `Stock` propio. `FechaVenta` y `Unds` son la fecha y las unidades de esa venta de ese producto a ese cliente. `Habitantes` es la población de la provincia.*
+*Cada cliente se identifica por su DNI y vive en una única provincia. Cada producto se identifica por su `IdP` y tiene un `Stock` propio. `FechaVenta` y `Unds` son la fecha y las unidades de esa venta de ese producto a ese cliente. `Habitantes` es la población de la provincia. Las claves primarias de la tabla es `(DNI, IdP)`.*
+
 
 **Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias (y claves foráneas), indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
 
