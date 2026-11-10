@@ -55,3 +55,21 @@ Una tienda de informática guarda sus ventas en una única tabla, `VENTAS_TIENDA
 **Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias (y claves foráneas), indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
 
 
+---
+
+## Ejercicio 4 — Suministros de piezas a una tienda
+
+![alt text](img/normalizacion4.png)
+
+Una tienda guarda los suministros que le hacen sus proveedores en una única tabla, `SUMINISTROS`:
+
+| cod_proveedor | proveedor | ciudad | cod_pieza | pieza | cod_categoria | categoria | cantidad | fecha |
+|---|---|---|---|---|---|---|---|---|
+| P01 | Tecnosur | Jaén | A101, A102 | Ratón, Monitor | C1, C2 | Periféricos, Pantallas | 20, 5 | 2025-03-01 |
+| P02 | Informax | Granada | A101 | Ratón | C1 | Periféricos | 40 | 2025-03-05 |
+| P03 | Compusur | Málaga | A103 | Teclado | C1 | Periféricos | 15 | 2025-03-09 |
+
+*Cada proveedor se identifica por su `cod_proveedor` y está en una única ciudad. Cada pieza se identifica por su `cod_pieza` y pertenece a una única categoría. `cantidad` y `fecha` son las unidades y la fecha de ese suministro de esa pieza por ese proveedor. La clave primaria de la tabla es `(cod_proveedor, cod_pieza)`.*
+
+**Se pide:** normaliza la tabla hasta cumplir la **Tercera Forma Normal (3FN)**. Muestra todas las tablas resultantes y sus claves primarias (y claves foráneas), indicando el paso en que se obtiene cada una (1FN, 2FN y 3FN).
+

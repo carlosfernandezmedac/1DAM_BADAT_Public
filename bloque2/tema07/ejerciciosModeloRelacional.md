@@ -39,11 +39,19 @@ Transformación de un esquema E-R a un esquema relacional
 
 ![Enunciado ejercicio 5](img/ejercicio5.png)
 
+---
 
-## Ejercicio 6 - streaming
+## Ejercicio 6 - Streaming
 
 > A partir del esquema E-R proporcionado, transforma el modelo a un esquema relacional. Ten en cuenta las siguientes condiciones: 
 > - Un usuario puede ver el mismo vídeo en fechas diferentes. Por ello, la fecha_hora debe considerarse parte de la clave primaria también. 
 > - Indica las claves primarias (PK) y claves foráneas (FK) de cada tabla.
 
 ![Enunciado ejercicio 6](img/ejercicio6.png)
+
+
+---
+
+# Ejercicio 7 - Clínicas dentales
+
+![alt text](img/ejercicio7.png)
