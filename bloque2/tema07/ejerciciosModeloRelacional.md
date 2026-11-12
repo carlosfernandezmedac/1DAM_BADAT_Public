@@ -49,7 +49,6 @@ Transformación de un esquema E-R a un esquema relacional
 
 ![Enunciado ejercicio 6](img/ejercicio6.png)
 
-
 ---
 
 # Ejercicio 7 - Clínicas dentales
