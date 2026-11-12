@@ -64,7 +64,7 @@ Partimos de la tienda del ejercicio 1, con estos datos:
 
 ```sql
 INSERT INTO PROVINCIAS (provincia, habitantes) VALUES ('Jaén', 100000), ('Granada', 200000);
-INSERT INTO PRODUCTOS VALUES ('P01', 'Ratón', 50), ('P02', 'Teclado', 20);
+INSERT INTO PRODUCTOS (IdP, nombreP, stock) VALUES ('P01', 'Ratón', 50), ('P02', 'Teclado', 20);
 INSERT INTO CLIENTES VALUES ('44444444X', 'Ana', 1), ('55555555H', 'Luis', 2);
 INSERT INTO VENTAS VALUES
     ('44444444X', 'P01', '2024-01-10', 1),
