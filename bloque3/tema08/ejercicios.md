@@ -253,8 +253,8 @@ Pasamos primero a modelo relacional de un cine (tema 7) antes de pasarlo a SQL:
 
 - El `num_sala` es un número entero que se asigna a mano. Toda sala tiene nombre y no puede haber dos con el mismo nombre.
 - El código de película tiene como máximo 5 caracteres. Toda película tiene título, año y duración, y la duración (en minutos) es siempre mayor que 0.
-- Una sala puede no tener película asignada. **Si se borra una película, sus salas no se borran: se quedan sin película.**
-- El número de butaca es un entero que solo se repite entre salas distintas. El tipo de butaca tiene como máximo 10 caracteres, es obligatorio, solo puede ser `'normal'` o `'vip'`, y vale `'normal'` si no se indica. **Si se borra una sala, se borran también sus butacas.**
+- Una sala puede no tener película asignada. **Si se borra una película, sus salas no se borran: se quedan sin película (null).**
+- El número de butaca es un entero que solo se repite entre salas distintas por lo que habría que crear una PK compuesta. El tipo de butaca tiene como máximo 10 caracteres, es obligatorio, solo puede ser `'normal'` o `'vip'`, y vale `'normal'` si no se indica. **Si se borra una sala, se borran también sus butacas.**
 - El DNI tiene como máximo 9 caracteres. Todo cliente tiene nombre y teléfono (9 caracteres), y el teléfono no se puede repetir entre clientes. El email es opcional.
 - En una reserva, el cliente, la butaca y la fecha son siempre obligatorios. Un cliente o una butaca con reservas no se pueden borrar.
 
