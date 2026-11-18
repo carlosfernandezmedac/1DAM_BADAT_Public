@@ -239,3 +239,77 @@ DELETE FROM PROVEEDORES WHERE cod_proveedor = 'P01';
 a) ¿Qué ocurre si `SUMINISTRA` está creada **como en el ejercicio** (sin `ON DELETE`)?
 
 b) Escribe cómo habría que definir la FK `cod_proveedor` de `SUMINISTRA` para que, al borrar un proveedor, se borren también sus suministros. ¿Qué filas quedarían en `SUMINISTRA` tras el `DELETE`?
+
+---
+
+
+## Ejercicio 4: El cine: del modelo relacional a SQL
+
+Pasamos primero a modelo relacional de un cine (tema 7) antes de pasarlo a SQL:
+
+![alt text](img/ejercicio4.png)
+
+**Condiciones del enunciado:**
+
+- El `num_sala` es un número entero que se asigna a mano. Toda sala tiene nombre y no puede haber dos con el mismo nombre.
+- El código de película tiene como máximo 5 caracteres. Toda película tiene título, año y duración, y la duración (en minutos) es siempre mayor que 0.
+- Una sala puede no tener película asignada. **Si se borra una película, sus salas no se borran: se quedan sin película.**
+- El número de butaca es un entero que solo se repite entre salas distintas. El tipo de butaca tiene como máximo 10 caracteres, es obligatorio, solo puede ser `'normal'` o `'vip'`, y vale `'normal'` si no se indica. **Si se borra una sala, se borran también sus butacas.**
+- El DNI tiene como máximo 9 caracteres. Todo cliente tiene nombre y teléfono (9 caracteres), y el teléfono no se puede repetir entre clientes. El email es opcional.
+- En una reserva, el cliente, la butaca y la fecha son siempre obligatorios. Un cliente o una butaca con reservas no se pueden borrar.
+
+**Se pide:** escribe el script SQL que crea la base de datos `cine` y sus cinco tablas, con todas las restricciones. Piensa en el orden en que hay que crear las tablas.
+
+---
+
+### Parte A. Modificar el cine (ALTER TABLE)
+
+El cine crece y hay que cambiar la estructura **sin borrar las tablas**. Escribe las sentencias para:
+
+1. Añadir a `PELICULAS` una columna `genero` de hasta 20 caracteres.
+2. Añadir a `PELICULAS` una columna `puntuacion` con 1 decimal (hasta 3 cifras en total), que no sea nula y por defecto 0.
+3. Añadir a `SALAS` una columna `planta` de tipo entero, que no sea nula y por defecto 0.
+4. Ampliar `titulo` de `PELICULAS` a 150 caracteres, manteniendo que no sea nulo.
+5. Cambiar el nombre de la columna `nombre` de `CLIENTES` por `nombre_completo`.
+6. Borrar la columna `genero` de `PELICULAS`.
+
+---
+
+### Parte B. Borrar con FK
+
+Partimos del cine del ejercicio, con estos datos:
+
+```sql
+INSERT INTO PELICULAS (cod_pelicula, titulo, anio, duracion) VALUES
+    ('F01', 'Dune', 2021, 155),
+    ('F02', 'Up', 2009, 96);
+INSERT INTO SALAS (num_sala, nombre, cod_pelicula) VALUES
+    (1, 'Sala Oro', 'F01'),
+    (2, 'Sala Plata', 'F02'),
+    (3, 'Sala Bronce', 'F01');
+INSERT INTO BUTACAS (num_sala, num_butaca, tipo) VALUES
+    (1, 1, 'normal'),
+    (1, 2, 'vip'),
+    (2, 1, 'normal');
+INSERT INTO CLIENTES (dni, nombre, telefono) VALUES ('11111111A', 'Ana', '600111222');
+INSERT INTO RESERVAS (num_sala, num_butaca, dni, fecha) VALUES (2, 1, '11111111A', '2025-05-10');
+```
+
+Se ejecutan **en este orden**:
+
+```sql
+-- 1
+DELETE FROM PELICULAS WHERE cod_pelicula = 'F01';
+-- 2
+DELETE FROM SALAS WHERE num_sala = 1;
+-- 3
+DELETE FROM SALAS WHERE num_sala = 2;
+-- 4
+DELETE FROM CLIENTES WHERE dni = '11111111A';
+```
+
+**Se pide:**
+
+a) Indica para cada sentencia si **funciona** o **da error**, y qué ocurre con las demás tablas.
+
+b) ¿Qué filas quedan al final en `SALAS` y en `BUTACAS`?
